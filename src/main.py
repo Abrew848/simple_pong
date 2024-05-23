@@ -12,6 +12,9 @@ s_width, s_height = screen.get_size()
 clock = pg.time.Clock()
 running = True
 
+# Music
+pg.mixer.music.load("my_pong_song.wav")
+
 # Settings here down
 settings = {'font': 'Comic Sans',
             'font-size': 36,
@@ -79,6 +82,8 @@ def court_display(scrn):
 
 def game_over(scrn):
     pass
+
+pg.mixer.music.play(-1)
 
 while running:
     if new_game:
